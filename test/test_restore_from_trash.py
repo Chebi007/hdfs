@@ -8,6 +8,6 @@ def test_restore_from_trash(app):
     directory = Directory(name="For restore")
     app.filebrowser.add_directory(directory)
     old_list = app.filebrowser.get_file_list()
-    app.filebrowser.restore_from_trash(directory)
+    app.filebrowser.restore_from_trash()
     new_list = app.filebrowser.get_file_list()
     assert len(old_list) == len(new_list)

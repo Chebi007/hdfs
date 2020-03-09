@@ -11,6 +11,7 @@ class Application:
             self.wd.maximize_window()
         elif browser == "chrome":
             self.wd = webdriver.Chrome()
+            self.wd.maximize_window()
         elif browser == "ie":
             self.wd = webdriver.Ie()
         else:
