@@ -45,6 +45,7 @@ class FilebrowserHelper:
         wd.find_element_by_xpath("//th/div").click()
         wd.find_element_by_xpath("//tbody[@id='files']/tr[3]/td/div").click()
         wd.find_element_by_id("trash-btn").click()
+        time.sleep(2)
         wd.find_element_by_xpath("//input[@value='Да']").click()
 
 
@@ -57,7 +58,7 @@ class FilebrowserHelper:
         wd.find_element_by_xpath("//tr[3]/td/div").click()
         wd.find_element_by_xpath("//button[@title='Restore from trash']").click()
         button = wd.find_element_by_xpath("//form[@id='restoreTrashForm']/input[2]")
-        time.sleep(1)
+        time.sleep(2)
         ActionChains(wd).click(button).perform()
-        time.sleep(1)
+        time.sleep(2)
 
