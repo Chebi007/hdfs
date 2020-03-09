@@ -1,0 +1,29 @@
+docker run --hostname=quickstart.cloudera --privileged=true -t -i -p 8888:8888 -p 7180:7180 cloudera/quickstart usr/bin/docker-quickstart
+
+Установить Cloudera Manager Express:
+sudo /home/cloudera/cloudera-manager --express --force
+
+Добавить пользователя cloudera в группу администраторов для доступа к веб-интерфейсу hdfs, для этого в Cloudera Manager (http://127.0.0.1:7180, cloudera/cloudera) перейти к кластеру HDFS,
+открыть вкладку Configurations и отредактировать hdfs-site.xml:
+Name: dfs.cluster.administrators
+Value: cloudera
+
+Рестартовать HDFS.
+
+Запустить HUE.
+
+
+
+Запуск автотестов
+Установить pycharm, python, geckodriver.
+
+Установить библиотеки python, выполнив команду:
+pip install -r requirements.txt.
+
+Запустить тесты через консоль - перейти в каталог с проектом hdfs и выполнить команду:
+py.test -v \test (будут запущены все три теста)
+
+Или каждый тест отдельно:
+py.test -v \test\test_add_directory.py
+py.test -v \test\test_add_file.py
+py.test -v \test\test_restore_from_trash.py
