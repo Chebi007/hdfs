@@ -1,0 +1,7 @@
+{
+  "web": {
+    "baseUrl": "http://localhost:8888/filebrowser/",
+    "username": "cloudera",
+    "password": "cloudera"
+  }
+}
