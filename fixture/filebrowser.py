@@ -52,8 +52,8 @@ class FilebrowserHelper:
     def restore_from_trash(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//tbody[@id='files']/tr[4]/td/div").click()
-        wd.find_element_by_id("trash-btn").click(
-        time.sleep(2))
+        wd.find_element_by_id("trash-btn").click()
+        time.sleep(2)
         wd.find_element_by_xpath("//input[@value='Да']").click()
         wd.find_element_by_link_text("Trash").click()
         wd.find_element_by_xpath("//tr[3]/td/div").click()
